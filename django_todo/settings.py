@@ -14,7 +14,7 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -83,7 +83,8 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {dj_database_url.parse("postgres://yewvntdlhizarm:e2f2ad664827b7d7ffdfe5274fa24613c4c3ae9d4fd0467ecfeee09eb42f2e5b@ec2-54-236-146-234.compute-1.amazonaws.com:5432/dggru22ktf2bb")
+    'default': 
+        dj_database_url.parse("postgres://yewvntdlhizarm:e2f2ad664827b7d7ffdfe5274fa24613c4c3ae9d4fd0467ecfeee09eb42f2e5b@ec2-54-236-146-234.compute-1.amazonaws.com:5432/dggru22ktf2bb")
 }
 
 
